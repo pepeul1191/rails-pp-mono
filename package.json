@@ -1,5 +1,27 @@
 {
-  "name": "test_app",
-  "private": true,
-  "dependencies": {}
+    "name": "test_app",
+    "preferGlobal": true,
+    "version": "0.0.1",
+    "author": "Pepe Valdivia <jvaldivia@softweb.pe>",
+    "description": "Aprendiendo a usar GULP",
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.10"
+    },
+    "dependencies": {
+        "express": "~3.4.7",
+        "gulp-livereload": "^3.8.1",
+        "handlebars": "^4.0.10",
+        "json-lint": "~0.1.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-concat-css": "^2.3.0",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-plumber": "^1.1.0",
+        "gulp-replace": "^0.6.1",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^4.3.11"
+    }
 }
