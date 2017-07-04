@@ -27,11 +27,16 @@
 				});
 		 	}else{
 		 		$("#coincidencias").empty();
+		 		$("#distrito_id").html("");
+		 		$("#txtNombre").val("");
 		 	}
 		});
 
 		$( "#coincidencias" ).on("click", function(event) {
 			var id_distrito = $(event.target).attr("id");
+			var nombre = $(event.target).html();
+			
+			$("#txtNombre").val(nombre);
 			$("#distrito_id").html(id_distrito);
 		});
 	});
