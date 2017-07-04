@@ -30,4 +30,7 @@ Rails.application.routes.draw do
 	get 'ulima/practica1/pokemon/editar/:id' => 'ulima/pokemon#editar'
 	get 'ulima/practica1/pokemon/ver/:id' => 'ulima/pokemon#ver'
 	get 'ulima/practica1/pokemon/eliminar/:id' => 'ulima/pokemon#eliminar'
+
+	get 'ulima/practica2/departamento' => 'ulima/departamento#index'
+	get 'ulima/practica2/departamento/buscar' => 'ulima/departamento#buscar'
 end

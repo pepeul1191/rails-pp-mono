@@ -13,6 +13,7 @@ gem 'sqlite3'
 #PEPIS
 gem 'sequel'
 gem 'openssl'
+gem 'mysql2'
 gem 'mongo'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
