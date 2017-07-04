@@ -8,8 +8,8 @@ class Ulima::Departamento
   	end
 
   	def buscar(nombre)
-            rs = @db[:vw_distrito_provincia_departamento].where(Sequel.like(:nombre, nombre + '%')).to_a
-            @db.disconnect
-            rs
+		rs = @db[:vw_distrito_provincia_departamento].where(Sequel.like(:nombre, nombre + '%')).limit(10).to_a
+      @db.disconnect
+      rs
   	end
 end
