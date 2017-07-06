@@ -77,3 +77,21 @@ gulp.task('login', function(){
     .pipe(gulp.dest('public/dist/login'))
     .pipe(livereload());
 });
+
+gulp.task('home', function(){
+  gulp.src(['public/bower_components/jquery/dist/jquery.min.js', 'public/bower_components/handlebars/handlebars.min.js', 'public/assets/layouts/home.js', 'public/assets/home/js/index.js'])
+    .pipe(uglify())
+    .pipe(plumber())
+    .pipe(concatJs('app.min.js'))
+    .pipe(gulp.dest('public/dist/home'))
+    .pipe(livereload());
+
+  gulp.src(['public/dist/assets/styles.min.css','public/assets/home/css/index.css'])
+    .pipe(plumber())
+    .pipe(concatCss('styles.min.css'))
+    .pipe(minifyCss())
+    .on('error', errorLog)
+    .pipe(gulp.dest('public/dist/home'))
+    .pipe(livereload());
+});
+

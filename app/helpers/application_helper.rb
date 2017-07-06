@@ -97,4 +97,9 @@ module ApplicationHelper
         
         rpta.html_safe
     end
+
+    def listar_modulos
+        url = "http://localhost/accesos/modulo/listar_menu?sistema=SISTEMA_ACCESOS"
+        return HTTParty.get(url)
+    end
 end
