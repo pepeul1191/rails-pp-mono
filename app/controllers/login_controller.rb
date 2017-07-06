@@ -5,7 +5,8 @@ class LoginController < ApplicationController
 		if session[:estado] == 'autenticado'
           redirect_to Constantes.base_url + 'home'
       else
-          @css = ['assets/login/css/index']
+          @css = ['dist/login/styles.min']
+          @js = ['dist/login/app.min']
           @title = 'Bienvenido'
           render 'index'
       end

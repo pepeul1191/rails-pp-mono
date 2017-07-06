@@ -23,8 +23,10 @@
     "tests"
   ],
   "dependencies": {
-      "unify-pp": "*",
-      "swp-plugins": "*",
-      "qunit": "^2.1.1"
+    "unify-pp": "*",
+    "swp-plugins": "*",
+    "qunit": "^2.1.1",
+    "backbone": "^1.3.3",
+    "handlebars": "^4.0.10"
   }
 }
