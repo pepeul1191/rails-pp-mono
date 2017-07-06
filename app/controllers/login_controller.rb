@@ -23,9 +23,10 @@ class LoginController < ApplicationController
           	session[:tiempo] = Time.now.strftime('%Y-%m-%d %H:%M:%S')
 			redirect_to Constantes.public_url + 'home'
 		else
-			@css = ['assets/login/css/index']
+			@css = ['dist/login/styles.min']
+          	@js = ['dist/login/app.min']
           	@title = 'Bienvenido'
-			@mensaje = true
+			@data = { 'mensaje' => true}.to_json
 			render 'index'
 		end
 	end

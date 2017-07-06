@@ -11,8 +11,20 @@
     <!-- Fin JS-->
   </head>
   <body>
-    <!-- Inicio yield-->
-    <%= yield %>
-    <!-- Fin yield-->
+    <script id="blank-template" type="text/x-handlebars-template">
+            <!-- Inicio Yield Handelbars-->
+            {{> yield}}
+            <!-- Fin Yield Handelbars-->
+        </script>
+        <script id="yield" type="text/x-handlebars-template">
+            <!-- Inicio yield-->
+            <%= yield %>
+            <!-- Fin yield-->
+        </script>
+    <script type="text/javascript">
+        var BASE_URL = '<%=Constantes.base_url%>';
+        var STATICS_URL  = '<%=Constantes.public_url%>';
+        var DATA = <%if defined? @data%>JSON.parse('<%=@data.html_safe%>');<%else%>""<%end%>
+    </script>
   </body>
 </html>

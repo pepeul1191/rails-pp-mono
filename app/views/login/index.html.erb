@@ -20,9 +20,7 @@
             <button class="btn-u pull-right" type="submit" style="width: 100%;  margin-bottom: 15px">Ingresar</button>
         </div>
     </div>
-    <%if @mensaje == true%>
-    <label class="color-rojo">Usario y/o contraseña incorrectos</label>
-    <%end%>
+    {{#if (getValue DATA "mensaje")}}<label class="color-rojo">Usario y/o contraseña incorrectos</label>{{/if}}
     <hr>
     <h4>Olvidó su contraseña?</h4>
     <p>No se preocupe, <a class="color-green" href="#">haga click aquí</a> para reenviar su contraseña.</p>

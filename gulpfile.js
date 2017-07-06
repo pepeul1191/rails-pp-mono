@@ -62,10 +62,12 @@ gulp.task('layout', ['fonts', 'layout-css', 'layout-js']);
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 gulp.task('login', function(){
-  gulp.src(['public/bower_components/jquery/dist/jquery.min.js', 'public/bower_components/handlebars/handlebars.min.js'])
+  gulp.src(['public/bower_components/jquery/dist/jquery.min.js', 'public/bower_components/handlebars/handlebars.min.js', 'public/assets/layouts/blank.js', 'public/assets/login/js/index.js'])
+    .pipe(uglify())
     .pipe(plumber())
-    .pipe(concatJs('app.min.js'))  // concat and name it "concat.js"
-    .pipe(gulp.dest('public/dist/login'));
+    .pipe(concatJs('app.min.js'))
+    .pipe(gulp.dest('public/dist/login'))
+    .pipe(livereload());
 
   gulp.src(['public/dist/assets/styles.min.css','public/assets/login/css/index.css'])
     .pipe(plumber())
@@ -75,4 +77,3 @@ gulp.task('login', function(){
     .pipe(gulp.dest('public/dist/login'))
     .pipe(livereload());
 });
-
